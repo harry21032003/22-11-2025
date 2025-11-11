@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A Netflix Series - Cuenta Regresiva</title>
+
+  <!-- Fuentes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/segment7" rel="stylesheet">
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="video-background">
+    <!-- Video de fondo -->
+    <video id="video" loop playsinline>
+      <source src="video1.mp4" type="video/mp4">
+      Tu navegador no soporta video HTML5.
+    </video>
+
+    <!-- Overlay de Play inicial -->
+    <div id="playOverlay" class="play-overlay">
+      <div class="play-button-large"></div>
+    </div>
+
+    <!-- Viñeta oscura en los bordes -->
+    <div class="vignette"></div>
+
+    <!-- Contenido principal (texto a la izquierda / escritorio) -->
+    <div class="overlay" id="mainOverlay">
+      <div class="text-box">
+        <h1 class="title">Je t’attends, Inévitablement</h1>
+        <p class="subtitle">Encore toi</p>
+        <div id="countdown" class="countdown">00:00:00</div>
+        <button class="cta-button" id="btnVerCompleto">Ver completo</button>
+      </div>
+    </div>
+
+    <!-- Versión móvil del contador y botón -->
+    <div class="bottom-section-mobile" id="mobileOverlay">
+      <div id="countdown-mobile" class="countdown">00:00:00</div>
+      <button class="cta-button" id="btnVerCompletoMobile">Ver completo</button>
+    </div>
+
+    <!-- Botón de sonido (oculto) -->
+    <button id="soundBtn" class="sound-btn">🔊 Activar sonido</button>
+
+    <!-- Botón volver (aparece solo al ver video completo) -->
+    <button id="btnVolver" class="back-button hidden" title="Volver">
+      ←
+    </button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
